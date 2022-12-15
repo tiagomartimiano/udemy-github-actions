@@ -12,16 +12,16 @@ on: [push, pull_request]
     # patchs:
     #   - '**.js'
     #   - '!filename.js'
-  paths-ignore:
-    - 'docs/**'          
+    paths-ignore:
+      - 'docs/**'          
   repository_dispatch:
     types: [build]
   #schedule:
   #  - cron: "0/5 * * * *"
   #  - cron: "0/6 * * * *"
   # push:
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  #pull_request:
+  #  types: [closed, assigned, opened, reopened]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
