@@ -30,7 +30,7 @@ jobs:
           echo ${{ format( 'Hello {0} {1} {2}', 'World', '!', '!' ) }}        
   dump_contexts_to_log:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'         
+    if: github.event_name == 'push'
     steps:
       - name: Dump GitHub context
         id: github_context_step
@@ -42,4 +42,4 @@ jobs:
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
         if: always()
-        run: echo '${{ toJSON(runner) }}'  
+        run: echo '${{ toJSON(runner) }}'        
